@@ -6,7 +6,7 @@ update. Contact support@zetya.com if you need assistance with BookThatApp.
 == Version: 1.6 ==
 {%- endcomment -%}
 {%- if content_for_header contains 'bta-installed.js' -%}
-  <script>
+  <script type="lazyload_int">
     {%- comment -%} BookThatApp config {%- endcomment -%}
     var bondVariantIds = [], productConfig = {}, productMetafields;
     {%- if product.metafields.bookthatapp.json_config -%}
@@ -51,6 +51,5 @@ update. Contact support@zetya.com if you need assistance with BookThatApp.
       version: '1.6'
     }
   </script>
-
-  {{ 'bta-widgets-bootstrap.min.js' | asset_url  | script_tag }}
+  <script type="lazyload_int" data-src="{{ 'bta-widgets-bootstrap.min.js' | asset_url }}"></script>  
 {%- endif -%}

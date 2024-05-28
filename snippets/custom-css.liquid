@@ -1,0 +1,76 @@
+<style>
+img[reveal=true] {
+    opacity: 1 !important; 
+    transform: none !important;
+}
+.header-cart-icon__count {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(var(--color-accent, var(--color-foreground)));
+    color: rgb(var(--color-background));
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    right: -10px;
+    top: -5px;
+    pointer-events: none;
+}
+input[type=radio]+label:not(.card-swatches__button) {
+    border: 1px solid rgb(var(--color-foreground),.2);
+    color: rgba(var(--color-foreground));
+    border-radius: var(--button-radius);
+}
+.footer__follow-on-shop shop-login-button {
+    width: 161px;
+    display: block;
+}
+.shopify-policy__container {
+    padding-left: 20px!important;
+    padding-right: 20px!important;
+}
+html {
+    padding-bottom: 0px !important;
+}
+@media (min-width: 991px){
+.collection--filters-large .collection-bar--active-filters {
+    margin-bottom: -10px;
+}}
+.collection-active-filters {
+    justify-content: start;
+}
+.collection-active-filter {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 5px 15px;
+    border-radius: var(--button-radius);
+    border: 1px solid rgba(var(--color-foreground),.2);
+    transition: border calc(.1s * var(--animations-multiple)) ease-out;
+}
+.collection-active-filter>span {
+    display: flex;
+}
+html:not(.jsload) .collection-utility-bar__sorting select {
+    width: 126px;
+}
+{% if canonical_url contains '/products/bap-5f598fb9-cea2-4daf-af30-afc971a11be4' %}
+.main-product__block-price:not(:has(#rbr-container-element-true)) .price-details.large-body-text {
+    padding-bottom: 256px;
+}
+html:not(.jsload) #rbr-container-element-true {
+    min-height: 256px;
+}
+{% elsif canonical_url contains '/products/lille-pakke-med-forbrugsvaerktoej' %}
+  .main-product__block-price:not(:has(#rbr-container-element-true)) .price-details.large-body-text {
+    padding-bottom: 508px;
+}
+  html:not(.jsload) #rbr-container-element-true {
+      min-height: 508px;
+}
+{% endif %}
+html:not(.jsload) .main-product__media-gallery__inner {
+    background-color: white !important;
+}
+</style>

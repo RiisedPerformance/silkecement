@@ -113,7 +113,7 @@
       {%- when 'description' -%}
         {%- if product.description != blank -%}
           <div class="rte small-body-text" {{ block.shopify_attributes }}>
-            {{ product.description }}
+            {{ product.description | replace: ' src="https://www.youtube-nocookie.com/' , ' data-src="https://www.youtube-nocookie.com/' }}
           </div>
         {%- endif -%}
 

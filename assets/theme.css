@@ -1743,7 +1743,7 @@ loess-cart-drawer-items:not(.is-empty) > .cart-form + .cart-drawer-recommendatio
   max-height: 100vh;
   color: var(--color-foreground);
   background-color: rgb(var(--color-background));
-  z-index: 99;
+  z-index: 9999999999;
   visibility: hidden;
 }
 
@@ -9759,6 +9759,10 @@ input[type=radio].disabled + label {
   .ed-custom-grid {
     grid-template-columns: 1fr;
   }
+}
+
+#tidio-chat-iframe {
+  z-index: 98 !important;
 }
 
 

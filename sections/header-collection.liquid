@@ -33,7 +33,7 @@
 
   {%- if collection.description != blank and section.settings.show_description -%}
     <p class="rte {% if section.settings.description_size == 'large' %}large-body-text{% endif %}">
-      {{ collection.description }}
+      {{ collection.description | replace: 'src="https://www.youtube', 'data-src="https://www.youtube'}}
     </p>
   {%- endif -%}
 {%- endcapture -%}
